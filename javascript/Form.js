@@ -29,3 +29,15 @@ email.addEventListener('input', function ()
     else
         emailError.textContent = "Invalid Email ID";
 });
+
+// Validate Mobile number
+const tel = document.querySelector('#tel');
+const telError = document.querySelector('.tel-error');
+tel.addEventListener('input', function () 
+{
+    let phoneRegex = new RegExp(/^[0-9]{2}[ ][6-9]{1}[0-9]{9}$/);
+    if (phoneRegex.test(tel.value))
+        telError.textContent = "";
+    else
+        telError.textContent = "Invalid Phone number";
+});

@@ -38,14 +38,15 @@
         <div>
             <label for="tel">Telephone input type:</label>
             <input type="tel" id="tel" autocomplete="off" name="tel">
+            <error-output class="tel-error" for="tel"></error-output>
         </div>
         <div>
             <label for="search">Search input type: </label>
-            <input type="search" id="search" name="search">
+            <input type="search" id="search" autocomplete="off" name="search">
         </div>
         <div class="nativeDateTimePicker">
             <label for="startDate">Choose a date and time:</label>
-            <input type="datetime-local" id="startDate" name="startDate">
+            <input type="datetime-local" id="startDate" name="startDate" autocomplete="off">
             <span class="validity"></span>
         </div>
         <div>
