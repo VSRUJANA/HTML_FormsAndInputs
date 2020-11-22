@@ -8,12 +8,24 @@ salary.addEventListener('input', function () {
 
 // Validate Name
 const name = document.querySelector('#name');
-const error = document.querySelector('.text-error');
+const nameError = document.querySelector('.text-error');
 name.addEventListener('input', function () 
 {
     let nameRegex = new RegExp(/^[A-Z][a-z]{2,}$/);
     if (nameRegex.test(name.value))
-        error.textContent = "";
+        nameError.textContent = "";
     else
-        error.textContent = "Invalid Name";
+        nameError.textContent = "Invalid Name";
+});
+
+// Validate Email ID
+const email = document.querySelector('#email');
+const emailError = document.querySelector('.email-error');
+email.addEventListener('input', function () 
+{
+    let emailRegex = new RegExp(/^[a-z0-9A-Z]+([._+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3})?$/);
+    if (emailRegex.test(email.value))
+        emailError.textContent = "";
+    else
+        emailError.textContent = "Invalid Email ID";
 });
