@@ -41,3 +41,15 @@ tel.addEventListener('input', function ()
     else
         telError.textContent = "Invalid Phone number";
 });
+
+// Validate Password
+const password = document.querySelector('#pwd');
+const passwordError = document.querySelector('.password-error');
+password.addEventListener('input', function () 
+{
+    let passwordRegex = new RegExp(/(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}/);
+    if (passwordRegex.test(password.value))
+        passwordError.textContent = "";
+    else
+        passwordError.textContent = "Invalid Password";
+});
